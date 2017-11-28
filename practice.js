@@ -8,8 +8,12 @@
 
   //Code here
 
+let me = {
+  name: 'Matthew',
+  age: 39
+}
 
-
+alert(me.name)
 
 
 
@@ -20,7 +24,14 @@
 
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
-  //Code here
+  let favoriteThings = {
+    band : 'Grizzly Derringer',
+    food : 'All of it', 
+    person : 'My wife',
+    book : 'Book',
+    movie : 'Movie',
+    holiday : 'ChrisGivings'
+  }
 
 
 
@@ -30,7 +41,8 @@
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 
-  //Code here
+  favoriteThings['car'] = 'Trans Am'
+  favoriteThings['brand'] = 'brand'
 
 
 
@@ -38,8 +50,8 @@
 
 //Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 
-  //Code here
-
+  favoriteThings['food'] = 'Chicken Nuggets'
+  favoriteThings['book'] = 'Harry Potter'
 
 
 
@@ -58,16 +70,19 @@ Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. 
 */
 
-  //Code here
+  let backPack = []
+  let item = 'firstPocket'
 
+  backPack['firstPocket'] = 'item'
 
+  backPack['firstPocket'] = 'chapstick'
 
 
 
 
 //After you do the above, alert your entire backPack object.
 
-  //Code here
+  //alert(backPack)
 
  
 
@@ -77,7 +92,7 @@ Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. 
 */
 
-  //Code here
+  console.log(backPack)
 
 
 
@@ -101,7 +116,8 @@ var user2 = {
 
   //Code Here
 
-
+user2['name'] = 'Tyler S. McGinnis'
+user2['email'] = 'tyler.mcginnis@devmounta.in'
 
 
 
@@ -121,7 +137,7 @@ var user2 = {
 
 //Create an empty object called methodCollection.
 
-  //Code Here
+  let methodCollection = {}
 
 
 
@@ -131,8 +147,9 @@ Now add two methods (functions that are properties on objects) to your methodCol
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. 
  */
-
-  //Code Here
+methodCollection.alertHello = () => alert('hello');
+methodCollection.logHello = () => console.log('hello');
+  
 
 
 
@@ -140,7 +157,9 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 //Now call your alertHello and logHello methods.
 
-  //Code Here
+  methodCollection.alertHello()
+  methodCollection.logHello()
+
 
 
 
@@ -156,7 +175,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called makePerson which takes in name, birthday, ssn as its
 // parameters and returns a new object with all of the information that you passed in.
 
-  //Code Here
+  let makePerson = (name, birthday, ssn) => {
+    var newObject = {
+      name: name,
+      birthday: birthday,
+      ssn: ssn
+    }
+    return newObject
+  }
 
 
 
@@ -171,6 +197,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 // Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
 
-  //Code Here
+  let makeCard = (cardNumber, expirationDate, securityCode) => {
+    let cc = {
+      cardNumber: cardNumber,
+      expirationDate: expirationDate,
+      securityCode : securityCode
+    }
+    return cc
+  }
 
+  makeCard(0198340913824098132, '11/28/2017', 345)
 
